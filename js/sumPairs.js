@@ -1,6 +1,5 @@
 exports.sumPairs = function(array, desiredSum) {
 
-    let holdingArray = []
     let finalArray = [];
 
     for (let i = 1; i < array.length; i++ )
@@ -10,8 +9,7 @@ exports.sumPairs = function(array, desiredSum) {
             if (array[a] == array[i]) continue; //Skips when number is the same
             if (array[a] + array[i] == desiredSum)
             {
-                holdingArray.push([array[i], array[a]]);
-                finalArray.push(holdingArray);
+                finalArray.push([array[i], array[a]]);
             }
         }
     }
@@ -20,15 +18,15 @@ exports.sumPairs = function(array, desiredSum) {
         return "unable to find pairs";
     }
     else{
-        return finalArray[0];
+        return finalArray;
     }
         
         
 
 };
-console.log(exports.sumPairs([1,2,3,4,5], 9));
-console.log(exports.sumPairs([1,2,3,4,5], 7));
-console.log(exports.sumPairs([3, 1, 5, 8, 2], 27));
+// console.log(exports.sumPairs([1,2,3,4,5], 9));
+// console.log(exports.sumPairs([1,2,3,4,5], 7));
+// console.log(exports.sumPairs([3, 1, 5, 8, 2], 27));
 
 
 
