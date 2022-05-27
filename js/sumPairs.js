@@ -6,7 +6,7 @@ exports.sumPairs = function(array, desiredSum) {
     { 
         for (let a = i; a < array.length; a++)
         {
-            if (array[a] == array[i]) continue; //Skips when number is the same
+            if (array[a] == array[i]) continue; // Skips when number is the same 
             if (array[a] + array[i] == desiredSum)
             {
                 finalArray.push([array[i], array[a]]);
