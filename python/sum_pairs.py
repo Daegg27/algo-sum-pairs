@@ -1,5 +1,6 @@
 def sum_pairs_function(given_list, desired_sum):
     final_list = []
+    real_final_list = []
     i_condition = len(given_list)
 
     for number in range(0, len(given_list)):
@@ -11,14 +12,14 @@ def sum_pairs_function(given_list, desired_sum):
     
 
     for x in final_list:
-        if x[0] > x[1]:
+        if x[1] > x[0]:
             # print(f"Deleted {x[0]} and {x[1]}")
-            final_list.remove(x)
+            real_final_list.append([x[0], x[1]])
              
-    # print(final_list)
+    # print(real_final_list)
     
-    if final_list == []:
+    if real_final_list == []:
         return "unable to find pairs"
     else: 
-        return final_list
+        return real_final_list
         
